@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+  display: flex;
+  flex-direction: column-reverse;
+    
+  
+}
+ h1{
+    color: blue;
+}
+p{
+    color: red;
+}
+
+.test{
+    width: 50%;
+    height: 300px;
+    border: 1px solid black;
+}
