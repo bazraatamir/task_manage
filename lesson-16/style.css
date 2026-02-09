@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+   
+    background: linear-gradient(to right, oklch(55.8% .288 302.321), oklch(51.1% .262 276.966));
+}
+header .mobile-menu-container{
+    color: white;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .mobile-menu-container .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+ main{
+    width: 100%;
+    margin: 20px 0;
+    
+ }
+
+ main .status-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    display: none;
+
+ }
+ main .status-container .status-button{
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 20px 0;
+ }
+
+.waiting{
+    border: 1px solid oklch(90.5% .182 98.111);
+    background: linear-gradient(300deg, oklch(90.5% .182 98.111),oklch(97.3% .071 103.193));
+}
+.processing{
+    border: 1px solid oklch(83.2% .234 234.231);
+    background: linear-gradient(300deg, oklch(83.2% .234 234.231),oklch(91.5% .1 250.231));
+}
+.complate{
+    border: 1px solid oklch(70.4% .318 142.966);
+    background: linear-gradient(300deg, oklch(70.4% .318 142.966),oklch(80.5% .15 157.966));
+}
+
+main .todo-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+main .add-container{
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+main .add-container input{
+    flex-grow: 1;
+  
+}
+main .add-container button{
+    padding: 5px 10px ;
+    font-size: 1rem;
+    background-color: oklch(45.7% .24 277.023);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}   
+
+main .task-list-container{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.5;
+}
+main .add-container .filter-task{
+    display: none;
+}
+footer{
+    width: 100%;
+    height: 60px;
+    
+}
+footer .mobile-footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+   
+}
+footer .mobile-footer .footer-menu-items{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+footer .mobile-footer .footer-menu-items .count-footer{
+    font-size: 12px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    position: absolute;
+    top: -5%;
+    right: 30%;
+    display: none;
+
+}
+main .todo-container .add-container .filter-task{
+    width:100%;
+    font-size: 1rem;
+
+}
+main .todo-container .add-container .filter-task .filters{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+main .todo-container .add-container .filter-task .filters li.filter-item{
+    display: flex;
+    gap: 10px;
+    padding: 10px 10px;
+    background-color: rgb(215, 215, 215);
+    border-radius: 5px;
+}
+
+@media  screen and (min-width:760px) {
+    main .todo-container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    main .todo-container .add-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        width:30%;
+        gap:10px
+    }
+    main .todo-container .add-container .add-task{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:10px
+    }
+    main .todo-container .add-container input{
+        width: 100%;
+    }
+    main .todo-container .add-container button{
+        width: 100%;
+    }
+    main .add-container .filter-task{
+        display: block;
+        margin-top: 10px;
+    }
+    main .todo-container .task-list-container{
+        width: 70%;
+        height: 400px;
+        margin-top: 10px;
+
+    }
+    footer .mobile-footer{
+        display: none;
+
+    }
+}

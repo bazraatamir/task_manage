@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+         <section class="mobile-menu-container ">
+            <div class="logo">
+               <i class="fa-solid fa-clipboard-list"></i>
+               <p>Todo App</p>
+            </div>
+            <div class="filter">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+
+         </section>
+         <section class="tablet-header">
+
+         </section>
+    </header>
+    <main>
+        <section class="status-container" id="status-container">  
+            <div class="status-button waiting " id="all">
+                <i class="fa-solid fa-clock"></i>
+                <p id="waitingId">0</p>
+               <p>Waiting</p> 
+            </div>
+            <div class="status-button processing" id="active">
+                <i class="fa-solid fa-circle-notch"></i>
+                <p>0</p>
+                <p>Processing</p>
+            </div>
+            <div class="status-button complate" id="completed">
+                <i class="fa-regular fa-circle-check"></i>
+                <p>
+                    0
+                </p>
+                <p>Completed</p>
+            </div>
+            
+        </section>
+
+        <section class="todo-container">
+            <section class="add-container">
+                <div class="add-task">
+                    <input type="text" id="taskid">
+                    <button onclick="addTask()">+</button>
+                </div>
+                    <div class="filter-task">
+                        <ul class="filters">
+                            <li class="filter-item">
+                                <p>all</p>
+                                <p>(0)</p>
+                            </li>
+                            <li class="filter-item">
+                                <p>all</p>
+                                <p>(0)</p>
+                            </li>
+                            <li class="filter-item">
+                                <p>all</p>
+                                <p>(0)</p>
+                            </li>
+                            <li class="filter-item">
+                                <p>all</p>
+                                <p>(0)</p>
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+            <section class="task-list-container" id="tasks-id">
+                <div id="empty">
+                    <i class="fa-solid fa-list-check"></i>
+                    <p>No tasks found </p>
+                </div>
+           
+                <ul class="task-list" id="task-list">
+                
+                </ul>
+            </section>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <section class="mobile-footer">
+            <div class="footer-menu-items">
+                <i class="fa-solid fa-list-check"></i>
+                <p>All</p>
+            </div>
+            <div class="footer-menu-items">
+                <i class="fa-solid fa-clock"></i>
+                <p class="count-footer">0</p>
+               <p>Waiting</p> 
+            </div>
+            <div class="footer-menu-items">
+                <i class="fa-solid fa-circle-notch"></i>
+                <p class="count-footer">0</p>
+                <p>Processing</p>
+            </div>
+            <div class="footer-menu-items">
+                <i class="fa-regular fa-circle-check"></i>
+                <p class="count-footer">
+                    0
+                </p>
+                <p>Completed</p>
+            </div>
+        </section>
+    </footer>
+   
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
