@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Таск Манажер</title>
 
 </head>
 <body>
+    <div class="pop-up-modal">
+        <div class="container">
+            <input type="text">
+            <input type="date" name="" id="">
+            <button id="add-todo">add</button>
+        </div>
+    </div>
     <!-- Left Sidebar - Icons Only -->
     <div class="left-sidebar glass">
         <div class="logo mono"><i class="fa-regular fa-alarm-clock"></i></div>
@@ -97,10 +104,9 @@
                         </svg>
                     </button>
                     <div class="month-title">
-                        <h1 class="mono">Хоёрдугаар сар 2026</h1>
-                        <p class="mono">Өнөөдөр: 2026-02-09</p>
+                        
                     </div>
-                    <button class="nav-button">
+                    <button class="nav-button" id="next-btn">
                         <svg viewBox="0 0 24 24">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
@@ -130,143 +136,25 @@
         <div class="calendar-container">
             <!-- Calendar Header -->
             <div class="calendar-header">
-                <div class="day-name mono">Ня</div>
-                <div class="day-name mono">Да</div>
-                <div class="day-name mono">Мя</div>
-                <div class="day-name mono">Лх</div>
-                <div class="day-name mono">Пү</div>
-                <div class="day-name mono">Ба</div>
-                <div class="day-name mono">Бя</div>
+                
             </div>
             
             <!-- Calendar Grid -->
             <div class="calendar-grid">
-                <!-- Week 1 -->
-                <div class="calendar-day glass">
-                    <div class="day-number mono">1</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">2</div>
-                    <div class="day-tasks">
-                        <div class="mini-task pending">Захиалга шалгах</div>
-                    </div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">3</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">4</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">5</div>
-                    <div class="day-tasks">
-                        <div class="mini-task pending">Илтгэл бэлтгэх</div>
-                    </div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">6</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">7</div>
-                </div>
                 
-                <!-- Week 2 -->
-                <div class="calendar-day glass">
-                    <div class="day-number mono">8</div>
-                </div>
-                <div class="calendar-day glass today">
-                    <div class="day-number mono">9</div>
-                    <div class="day-tasks">
-                        <div class="mini-task completed">Код review хийх</div>
-                        <div class="mini-task pending">Баг уулзах</div>
-                    </div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">10</div>
-                    <div class="day-tasks">
-                        <div class="mini-task pending">Төслийн танилцуулга</div>
-                    </div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">11</div>
-                    <div class="day-tasks">
-                        <div class="mini-task pending">Багийн уулзалт</div>
-                    </div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">12</div>
-                    <div class="day-tasks">
-                        <div class="mini-task pending">Дизайн баталгаажуулалт</div>
-                    </div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">13</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">14</div>
-                    <div class="day-tasks">
-                        <div class="mini-task pending">Тайлан бичих</div>
-                    </div>
-                </div>
-                
-                <!-- Week 3 -->
-                <div class="calendar-day glass">
-                    <div class="day-number mono">15</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">16</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">17</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">18</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">19</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">20</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">21</div>
-                </div>
-                
-                <!-- Week 4 -->
-                <div class="calendar-day glass">
-                    <div class="day-number mono">22</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">23</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">24</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">25</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">26</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">27</div>
-                </div>
-                <div class="calendar-day glass">
-                    <div class="day-number mono">28</div>
-                </div>
             </div>
         </div>
     </div>
 
     <!-- Mobile Floating Buttons -->
     <div class="floating-buttons">
-        <button class="floating-btn search">
+        <button class="floating-btn search" >
             <svg viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.35-4.35"></path>
             </svg>
         </button>
-        <button class="floating-btn add">
+        <button class="floating-btn add" id="add-btn">
             <svg viewBox="0 0 24 24">
                 <line x1="12" y1="5" x2="12" y2="19"></line>
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -280,5 +168,7 @@
             <div class="notification-badge mono">3</div>
         </button>
     </div>
+    <script src="./public/app.js" type="module" ></script>
+    <script  src="./public/js/calendar.js" type="module" ></script>
 </body>
 </html>
